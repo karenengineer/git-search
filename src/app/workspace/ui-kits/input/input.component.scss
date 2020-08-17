@@ -1,0 +1,13 @@
+.input-container {
+  input {
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    padding: 2px;
+    border-bottom: 1px solid black;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<div class="repository-container">
+    <div class="search">
+        <app-input [placeholder]="'Search...'" [width]="500" [control]="control"></app-input>
+    </div>
+
+    <ng-container *ngIf="repositories$ | async as repositories; else loadingOrError">
+        <ul>
+            <ng-container *ngIf="repositories.items?.length; else noItemsToShow">
+                <li *ngFor="let repository of repositories.items" (click)="navigateToRepository(repository)">
+                    <div class="title">{{ repository.name }}</div>
+                    <div class="description">{{ repository.description }}</div>
+                </li>
+            </ng-container>
+
+            <ng-template #noItemsToShow>
+                <div class="no-results">No Items to Show</div>
+            </ng-template>
+        </ul>
+    </ng-container>
+
+    <ng-template #loadingOrError>
+        <div *ngIf="loadingError$ | async; else loading">
+            <div class="no-results">No Items to Show</div>
+        </div>
+        <ng-template #loading>
+<!--            <app-loader></app-loader>-->
+        </ng-template>
+    </ng-template>
+
+</div>

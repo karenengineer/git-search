@@ -1,0 +1,41 @@
+<div class="repository-component">
+    <ng-container *ngIf="repository$ | async as repository; else loading">
+        <div class="avatar">
+            <app-image
+                    [height]="300"
+                    [width]="300"
+                    [src]="repository.owner.avatar_url"></app-image>
+        </div>
+        <ul>
+            <li>
+                <div class="title">Owner Organization</div>
+                <div class="description">{{ repository.owner.organizations_url }}</div>
+            </li>
+            <li>
+                <div class="title">Name</div>
+                <div class="description">{{ repository.name }}</div>
+            </li>
+            <li>
+                <div class="title">Full name</div>
+                <div class="description">{{ repository.full_name }}</div>
+            </li>
+            <li>
+                <div class="title">Description</div>
+                <div class="description">{{ repository.description }}</div>
+            </li>
+            <li>
+                <div class="title">Creation Date</div>
+                <div class="description">{{ repository.created_at }}</div>
+            </li>
+            <li>
+                <div class="title">Clone url</div>
+                <div class="description">{{ repository.clone_url }}</div>
+            </li>
+        </ul>
+    </ng-container>
+
+    <ng-template #loading>
+        <app-loader></app-loader>
+    </ng-template>
+
+</div>

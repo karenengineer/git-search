@@ -1,0 +1,24 @@
+.loader-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.3;
+  //text-align: center;s
+  //
+  //display: table-cell;
+  //vertical-align: middle;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    right: 50%;
+    bottom: 50%;
+    //height: 30%;
+    //width: 50%;
+    //margin: -15% 0 0 -25%;
+  }
+}

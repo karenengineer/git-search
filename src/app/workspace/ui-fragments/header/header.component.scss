@@ -1,0 +1,25 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+  padding: 0 10px;
+  border-radius: 5px;
+
+  -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+
+  .logo {
+
+  }
+
+  .search {
+
+  }
+
+  .navigation {
+
+  }
+
+}
